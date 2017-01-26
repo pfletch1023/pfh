@@ -1,0 +1,82 @@
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic);
+.gainlayout {
+  zoom: 1; }
+
+/* Can't @extend .hide from @media directive :( */
+@media only screen and (max-width: 767px) {
+  .no-phone {
+    display: none !important; } }
+
+@media only screen and (max-width: 480px) {
+  .no-small-phone {
+    display: none !important; } }
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  .no-tablet {
+    display: none !important; } }
+
+@media only screen and (max-width: 767px) {
+  .no-small-mobile {
+    display: none !important; } }
+
+@media only screen and (max-width: 991px) {
+  .no-mobile {
+    display: none !important; } }
+
+@media only screen and (min-width: 992px) {
+  .no-desktop {
+    display: none !important; } }
+
+body {
+  background-color: white;
+  font-family: "Source Sans Pro", "HelveticaNeue", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; }
+
+p {
+  font-size: 2em;
+  font-weight: 300;
+  color: #222; }
+
+strong {
+  font-weight: 600; }
+
+a {
+  text-decoration: none;
+  color: #4CCEAD;
+  border-bottom: 2px dotted #4CCEAD; }
+  a:hover {
+    border-bottom: 2px solid #4CCEAD; }
+
+.container {
+  max-width: 750px;
+  width: 90%;
+  margin: auto;
+  margin-top: 5em; }
+
+.draggable {
+  cursor: move; }
+
+.links {
+  margin: 4em 0; }
+  .links a {
+    color: #555;
+    border-bottom: 1px solid #555;
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.6)";
+    -moz-opacity: 0.6;
+    -khtml-opacity: 0.6;
+    opacity: 0.6;
+    -webkit-filter: opacity(60);
+    filter: alpha(opacity=60);
+    transition: 0.1s opacity;
+    -moz-transition: 0.1s opacity;
+    -webkit-transition: 0.1s opacity;
+    -o-transition: 0.1s opacity;
+    cursor: pointer; }
+    .links a:hover {
+      -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=1)";
+      -moz-opacity: 1;
+      -khtml-opacity: 1;
+      opacity: 1;
+      -webkit-filter: opacity(100);
+      filter: alpha(opacity=100); }
+
+/*# sourceMappingURL=style.css.map */

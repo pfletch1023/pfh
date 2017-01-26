@@ -1,0 +1,141 @@
+// Fonts
+@import url(https://fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic);
+$sans: 'Source Sans Pro', 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, 'Lucida Grande', sans-serif;
+
+// Colors
+$grey: #aaa;
+$border-grey: #dadada;
+$light-border-grey: #eee;
+$light-grey: #fafafa;
+$dark-grey: #555;
+$text-grey: #777;
+$light-text-grey: #aaa;
+$purple: #7A52CC;
+$purple-highlight: #55398F;
+$dark-blue: #2854A1;
+$blue: #3366CC;
+$light-blue: lighten($blue, 5%);
+$green: #4CCEAD;
+$red: red;
+$orange: #ff6600;
+$top-z: 101;
+
+// Mixins
+@mixin calc($attribute, $x) {
+  #{$attribute}: -moz-calc(#{$x});
+  #{$attribute}: -webkit-calc(#{$x});
+  #{$attribute}: -o-calc(#{$x});
+  #{$attribute}: calc(#{$x});
+}
+
+@mixin transition($x) {
+  transition: #{$x};
+  -moz-transition: #{$x};
+  -webkit-transition: #{$x};
+  -o-transition: #{$x};
+}
+
+@mixin transform ($expression) {
+  -moz-transform: $expression;
+  -webkit-transform: $expression;
+  transform: $expression;
+}
+
+@mixin gradient($x, $y) {
+  background-image: linear-gradient(bottom, $x, $y);
+  background-image: -o-linear-gradient(bottom, $x, $y);
+  background-image: -moz-linear-gradient(bottom, $x, $y);
+  background-image: -webkit-linear-gradient(bottom, $x, $y);
+  background-image: -ms-linear-gradient(bottom, $x, $y);
+}
+
+@mixin opacity($opacity) {
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=#{$opacity})";
+  -moz-opacity: $opacity;
+  -khtml-opacity: $opacity;
+  opacity: $opacity;
+  $opacity-percentage: $opacity * 100;
+  -webkit-filter: opacity($opacity-percentage);
+  filter: alpha(opacity=$opacity-percentage); // IE8
+}
+
+@mixin box-shadow ($expression) {
+  -webkit-box-shadow: $expression;
+  -moz-box-shadow: $expression;
+  box-shadow: $expression;
+}
+
+@mixin border-radius ($expression) {
+  -moz-border-radius: $expression;
+  -webkit-border-radius: $expression;
+  border-radius: $expression;
+}
+
+// Layouts
+$small-min-width: 780px;
+$small-container-width: 700px;
+$large-min-width: 1060px;
+$large-container-width: 800px;
+
+$small-phone-width: 320px;
+$phone-width: 480px;
+$tablet-width: 768px;
+$small-desktop-width: 1024px; // Also iPad landscape
+$large-desktop-width: 1624px;
+
+// Bootstrap dimensions
+$tablet-min: 768px;
+$desktop-min: 992px;
+
+@mixin small-phone {
+  @media only screen and (max-width: #{$phone-width}) { @content; }
+}
+
+@mixin phone {
+  @media only screen and (max-width: #{$tablet-min - 1}) { @content; }
+}
+
+@mixin tablet {
+  @media only screen and (min-width: #{$tablet-width}) and
+  (max-width: #{$small-desktop-width}) { @content; }
+}
+
+@mixin mobile {
+  @media only screen and (max-width: #{$desktop-min - 1}) { @content; }
+}
+
+@mixin desktop {
+  @media only screen and (min-width: #{$desktop-min}) { @content; }
+}
+
+@mixin screen($min, $max) {
+  @media only screen and (min-width: $min) and (max-width: $max) { @content; }
+}
+
+.gainlayout {
+  zoom: 1; // IE hasLayout hack (http://www.satzansatz.de/cssd/onhavinglayout.html)
+}
+/* Can't @extend .hide from @media directive :( */
+.no-phone {
+  @include phone { display: none !important; }
+}
+
+.no-small-phone {
+  @include small-phone { display: none !important; }
+}
+
+.no-tablet {
+  @include tablet { display: none !important; }
+}
+
+.no-small-mobile {
+  @include phone { display: none !important; }
+}
+
+.no-mobile {
+  @include mobile { display: none !important; }
+}
+
+.no-desktop {
+  @include desktop { display: none !important; }
+}
