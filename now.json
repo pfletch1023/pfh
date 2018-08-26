@@ -1,0 +1,6 @@
+{
+  "alias": ["paulfletcherhill.com", "www.paulfletcherhill.com"],
+  "env": {
+    "NODE_ENV": "production"
+  }
+}

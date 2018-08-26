@@ -1,0 +1,20 @@
+{
+  "name": "pfh-static",
+  "version": "0.1.0",
+  "main": "index.js",
+  "author": "Paul Fletcher-Hill",
+  "scripts": {
+    "dev": "next",
+    "build": "next build",
+    "export": "next export",
+    "start": "next start"
+  },
+  "dependencies": {
+    "emotion": "^9.2.6",
+    "emotion-server": "^9.2.6",
+    "next": "^5.0.0",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0",
+    "react-emotion": "^9.2.6"
+  }
+}

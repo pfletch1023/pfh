@@ -1,1 +1,14 @@
-/.sass-cache
+node_modules
+.node-xmlhttp*
+bundle.js
+.node-xmlhttp*
+*.iml
+geth.log
+dist/
+firebase-debug.log
+.env
+*.DS_Store
+.idea/*
+yarn-error.log
+.next/
+build/
