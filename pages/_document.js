@@ -23,7 +23,9 @@ export default class MyDocument extends Document {
           <title>Paul Fletcher-Hill</title>
           <meta
             name="description"
-            content="A new way to trade blockchain-based financial products."
+            content={
+              '"There has to be a mathematical explanation for how bad that tie is."'
+            }
           />
           <meta
             name="viewport"
@@ -35,10 +37,6 @@ export default class MyDocument extends Document {
             href="/static/favicon.ico"
           />
 
-          <link
-            href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600"
-            rel="stylesheet"
-          />
           <style dangerouslySetInnerHTML={{ __html: this.props.css }} />
         </Head>
         <body>
