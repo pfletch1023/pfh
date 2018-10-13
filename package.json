@@ -10,11 +10,13 @@
     "start": "next start"
   },
   "dependencies": {
+    "dotenv": "^6.1.0",
     "emotion": "^9.2.6",
     "emotion-server": "^9.2.6",
     "next": "^5.0.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
-    "react-emotion": "^9.2.6"
+    "react-emotion": "^9.2.6",
+    "react-ga": "^2.5.3"
   }
 }

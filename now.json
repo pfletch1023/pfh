@@ -1,6 +1,7 @@
 {
   "alias": ["paulfletcherhill.com", "www.paulfletcherhill.com"],
   "env": {
-    "NODE_ENV": "production"
+    "NODE_ENV": "production",
+    "GA_ID": "@pfh-ga-id"
   }
 }
